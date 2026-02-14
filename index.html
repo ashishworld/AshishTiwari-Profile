@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashish Tiwari - SR Cloud Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #1a1a2e;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #0f3460;
+        }
+        
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .profile-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #fff;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+            margin-bottom: 30px;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .hero h2 {
+            font-size: 2rem;
+            font-weight: 400;
+            margin-bottom: 20px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            padding: 15px 40px;
+            background: #e94560;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, background 0.3s;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            background: #d63447;
+        }
+        
+        .btn-secondary {
+            padding: 15px 40px;
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.1);
+        }
+        
+        section {
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #1a1a2e;
+        }
+        
+        .about {
+            background: #fff;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #555;
+        }
+        
+        .experience {
+            background: #f9f9f9;
+        }
+        
+        .timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .exp-card {
+            background: #fff;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border-left: 4px solid #0f3460;
+        }
+        
+        .exp-card h3 {
+            font-size: 1.5rem;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+        }
+        
+        .company {
+            font-size: 1.1rem;
+            color: #0f3460;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        
+        .period {
+            color: #888;
+            margin-bottom: 15px;
+        }
+        
+        .skills {
+            background: #fff;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .skill-card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .skill-card h3 {
+            font-size: 1.3rem;
+            color: #0f3460;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #0f3460;
+            padding-bottom: 10px;
+        }
+        
+        .skill-card ul {
+            list-style: none;
+        }
+        
+        .skill-card li {
+            padding: 8px 0;
+            color: #555;
+        }
+        
+        .projects {
+            background: #f9f9f9;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        
+        .project-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card h3 {
+            font-size: 1.4rem;
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        .tech {
+            background: #0f3460;
+            color: #fff;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .contact {
+            background: #fff;
+            text-align: center;
+        }
+        
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            font-size: 1.1rem;
+            margin-top: 30px;
+        }
+        
+        .contact-info a {
+            color: #0f3460;
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.3rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .profile-photo {
+                width: 140px;
+                height: 140px;
+            }
+            
+            nav {
+                flex-direction: column;
+                gap: 20px;
+                padding: 20px;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+            
+            section {
+                padding: 60px 15px;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .exp-card, .skill-card, .project-card {
+                padding: 20px;
+            }
+            
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn-primary, .btn-secondary {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero h2 {
+                font-size: 1.1rem;
+            }
+            
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+            
+            nav ul {
+                gap: 10px;
+                font-size: 0.9rem;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .exp-card h3, .project-card h3 {
+                font-size: 1.2rem;
+            }
+            
+            .skill-card h3 {
+                font-size: 1.1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Ashish Tiwari</div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <img src="PhotoGraph.png" alt="Ashish Tiwari" class="profile-photo">
+            <h1>Hi, I'm Ashish Tiwari</h1>
+            <h2>Senior Cloud Infrastructure Engineer / DevOps</h2>
+            <p>15+ Years in Server Management & IT Operations | 8+ Years in Cloud Computing | AWS | Azure | GCP | DevOps</p>
+            <div class="buttons">
+                <a href="#contact" class="btn-primary">Get In Touch</a>
+                <a href="https://linkedin.com/in/iashishtiwari/" target="_blank" class="btn-secondary">LinkedIn</a>
+                <a href="https://github.com/ashishworld/" target="_blank" class="btn-secondary">GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <p>
+                With 15+ years of experience in IT operations and system administration, including 8+ years specializing in 
+                multi-cloud environments, I design, build, and manage secure, high-performance infrastructure across AWS, Azure, 
+                GCP, and DigitalOcean. My expertise spans containerization, orchestration, infrastructure automation using 
+                Terraform and Ansible, and building robust CI/CD pipelines.
+            </p>
+            <p>
+                I've successfully migrated legacy systems to modern containerized platforms, reduced cloud costs through optimization, 
+                and implemented monitoring solutions that maintain 99.9% uptime. My expertise includes security hardening, disaster 
+                recovery planning, and creating scalable architectures that just work.
+            </p>
+            <p>
+                Closely collaborated with brands like Mastek, Astral Ltd, Baggit, GJEPC Event, TimesPro, NMIMS, JM Finance Ltd, 
+                EY, AstaGuru, Phoenix, IdeaForge, and 150+ others.
+            </p>
+        </div>
+    </section>
+
+    <section id="experience" class="experience">
+        <h2>Experience</h2>
+        <div class="timeline">
+            <div class="exp-card">
+                <h3>Senior Cloud Infrastructure Engineer (L3)</h3>
+                <div class="company">Centrilogic</div>
+                <div class="period">August 2025 - Present</div>
+                <p>Managing enterprise cloud infrastructure across AWS, Azure, and GCP. Leading infrastructure automation initiatives and ensuring optimal performance and security.</p>
+            </div>
+            <div class="exp-card">
+                <h3>Sr Cloud Engineer / DevOps</h3>
+                <div class="company">Kwebmaker Digital Agency</div>
+                <div class="period">April 2021 - July 2025</div>
+                <p>Architected and managed cloud infrastructure across AWS/Azure/GCP. Containerized applications using Docker and deployed on Kubernetes (EKS) via ArgoCD. Built CI/CD pipelines with Jenkins/GitHub Actions and implemented IaC using Terraform. Maintained 99.9% uptime through comprehensive monitoring with Grafana/Prometheus/CloudWatch.</p>
+            </div>
+            <div class="exp-card">
+                <h3>Cloud Support Engineer</h3>
+                <div class="company">Kwebmaker Digital Agency</div>
+                <div class="period">April 2018 - March 2021</div>
+                <p>Managed cloud infrastructure across AWS, provisioned VMs and managed services, configured IAM roles and security groups. Implemented SSL/TLS certificates and maintained uptime SLAs using CloudWatch and monitoring tools.</p>
+            </div>
+            <div class="exp-card">
+                <h3>Senior System Administrator</h3>
+                <div class="company">Kwebmaker Digital Agency</div>
+                <div class="period">April 2015 - March 2018</div>
+                <p>Maintained application servers (Linux/Windows), configured network infrastructure (VPN, firewalls, DNS), and automated routine tasks using Bash/PowerShell. Ensured 99.5% uptime for business-critical services and implemented security policies.</p>
+            </div>
+            <div class="exp-card">
+                <h3>System Administrator</h3>
+                <div class="company">Kwebmaker Digital Agency</div>
+                <div class="period">April 2012 - March 2015</div>
+                <p>Managed Windows/Linux servers achieving 99.9% uptime. Oversaw web hosting (Apache/Nginx/IIS), implemented firewall rules, and designed backup strategies for critical data. Provided 24/7 on-call support for critical incidents.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills & Technologies</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Cloud Platforms</h3>
+                <ul>
+                    <li>AWS (EC2, S3, Lambda, RDS, VPC, EKS)</li>
+                    <li>Microsoft Azure</li>
+                    <li>Google Cloud Platform (GCP)</li>
+                    <li>DigitalOcean</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Containers & Orchestration</h3>
+                <ul>
+                    <li>Docker & Docker Compose</li>
+                    <li>Kubernetes (EKS/Self-managed)</li>
+                    <li>ArgoCD (GitOps)</li>
+                    <li>Helm Charts</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Automation & IaC</h3>
+                <ul>
+                    <li>Terraform</li>
+                    <li>Ansible</li>
+                    <li>AWS CloudFormation</li>
+                    <li>Jenkins & GitHub Actions</li>
+                    <li>Bash & Python Scripting</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Servers & Web Services</h3>
+                <ul>
+                    <li>Linux (Ubuntu, CentOS, RHEL)</li>
+                    <li>Windows Server</li>
+                    <li>Nginx, Apache2, IIS</li>
+                    <li>PHP</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Security & Compliance</h3>
+                <ul>
+                    <li>IAM Roles & Policies</li>
+                    <li>SSL/TLS Management</li>
+                    <li>WAF & Firewalls</li>
+                    <li>Vulnerability Assessments</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h3>Monitoring & Observability</h3>
+                <ul>
+                    <li>CloudWatch</li>
+                    <li>Prometheus & Grafana</li>
+                    <li>Dynatrace</li>
+                    <li>Azure Monitor</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <h3>Kubernetes Migration & GitOps</h3>
+                <p>Migrated legacy applications to containerized Kubernetes (EKS) environment. Implemented GitOps workflow using ArgoCD for automated deployments, reducing deployment time by 70% and achieving zero-downtime releases.</p>
+                <div class="tech-stack">
+                    <span class="tech">Kubernetes</span>
+                    <span class="tech">Amazon EKS</span>
+                    <span class="tech">ArgoCD</span>
+                    <span class="tech">Docker</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Multi-Cloud Infrastructure Automation</h3>
+                <p>Designed and implemented Infrastructure as Code across AWS, Azure, and GCP using Terraform. Automated provisioning of VMs, networking, and security configurations, reducing manual effort by 80%.</p>
+                <div class="tech-stack">
+                    <span class="tech">Terraform</span>
+                    <span class="tech">AWS</span>
+                    <span class="tech">Azure</span>
+                    <span class="tech">GCP</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>High-Availability Monitoring Stack</h3>
+                <p>Built comprehensive monitoring and alerting system using Prometheus, Grafana, and CloudWatch. Achieved 99.9% uptime through proactive monitoring and automated incident response.</p>
+                <div class="tech-stack">
+                    <span class="tech">Prometheus</span>
+                    <span class="tech">Grafana</span>
+                    <span class="tech">CloudWatch</span>
+                    <span class="tech">Dynatrace</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>CI/CD Pipeline Optimization</h3>
+                <p>Built automated CI/CD pipelines using Jenkins and GitHub Actions for microservices deployment. Integrated security scanning and automated testing, reducing deployment failures by 65%.</p>
+                <div class="tech-stack">
+                    <span class="tech">Jenkins</span>
+                    <span class="tech">GitHub Actions</span>
+                    <span class="tech">Docker</span>
+                    <span class="tech">Bash</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Disaster Recovery & Backup Automation</h3>
+                <p>Implemented automated backup solutions for cloud instances, databases, and storage. Developed disaster recovery procedures ensuring data integrity and quick recovery with RPO < 1 hour.</p>
+                <div class="tech-stack">
+                    <span class="tech">AWS Backup</span>
+                    <span class="tech">Python</span>
+                    <span class="tech">Ansible</span>
+                    <span class="tech">CloudFormation</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <h3>Cloud Cost Optimization</h3>
+                <p>Analyzed and optimized cloud resource utilization across AWS and Azure. Implemented auto-scaling, right-sizing, and reserved instances strategy, reducing monthly cloud costs by 40%.</p>
+                <div class="tech-stack">
+                    <span class="tech">AWS Cost Explorer</span>
+                    <span class="tech">Azure Cost Management</span>
+                    <span class="tech">Terraform</span>
+                    <span class="tech">Python</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Get In Touch</h2>
+        <div class="contact-content">
+            <p>I'm always open to discussing new opportunities, collaborations, or cloud engineering challenges.</p>
+            <div class="contact-info">
+                <div><strong>Email:</strong> <a href="mailto:ashish.kweb@gmail.com">ashish.kweb@gmail.com</a></div>
+                <div><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/iashishtiwari/" target="_blank">linkedin.com/in/iashishtiwari/</a></div>
+                <div><strong>GitHub:</strong> <a href="https://github.com/ashishworld/" target="_blank">github.com/ashishworld</a></div>
+            </div>
+            <div style="margin-top: 30px;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #2c3e50;">🏆 Award Recognition</h3>
+                <div style="background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; border-radius: 5px; margin-bottom: 25px;">
+                    <p style="color: #856404; margin: 0; line-height: 1.6;">
+                        <strong>Best CI/CD (Software Development)</strong> at the 7th Edition of INDIA DevOps Show 2025, 
+                        organized by Quantic (May 23, 2025). Led and implemented complete CI/CD pipeline optimizing deployments 
+                        across AWS at KWebmaker Digital.
+                    </p>
+                </div>
+            </div>
+            <div style="margin-top: 30px;">
+                <h3 style="font-size: 1.3rem; margin-bottom: 15px; color: #2c3e50;">Certifications</h3>
+                <ul style="list-style: none; padding: 0;">
+                    <li style="padding: 5px 0;">✓ AWS Certified Solutions Architect – Associate</li>
+                    <li style="padding: 5px 0;">✓ AWS Certified SysOps Administrator – Associate</li>
+                    <li style="padding: 5px 0;">✓ Amazon Web Services Cloud Practitioner</li>
+                    <li style="padding: 5px 0;">✓ Red Hat Certified Engineer (RHCE)</li>
+                    <li style="padding: 5px 0;">✓ Red Hat Certified System Administrator (RHCSA)</li>
+                    <li style="padding: 5px 0;">✓ Microsoft Certified Systems Administrator</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
